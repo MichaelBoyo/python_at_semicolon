@@ -1,7 +1,5 @@
-import random
+s = "hello"
+print(s[:])
+print(s[0: 10])
+print(s[0: 4: 2])
 
-random.randint(0, 100)
-count = 0
-while count <= 100:
-    print(random.randint(0, 100))
-    count += 1
