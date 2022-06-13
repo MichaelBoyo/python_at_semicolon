@@ -5,4 +5,3 @@ seconds = time % 60
 if minutes > 60:
     minutes = minutes - 60
 print(f"{hour=:<4}{minutes=:<4}{seconds=:<4}")
-
