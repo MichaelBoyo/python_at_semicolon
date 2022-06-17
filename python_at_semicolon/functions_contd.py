@@ -21,9 +21,3 @@ def get_triangle():
     x2, y2 = get_vertex()
     print("third vertex")
     x3, y3 = get_vertex()
-
-
-# def side_length(x1,y1,x2,y2):
-#     return math.sqrt((x1,y1))
-# def calculate_area():
-#     a = side_length(x1,y1,x2,y2)
