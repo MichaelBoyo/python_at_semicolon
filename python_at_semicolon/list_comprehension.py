@@ -15,11 +15,34 @@ import rotate
 # pr = [i for i in range(3, 100) if rotate.is_prime(i)]
 # print(pr)
 
-def cube(num):
-    return num ** 3
-
-
-cubes = [cube(i) for i in range(1, 54)]
-print(cubes)
+# def cube(num):
+#     return num ** 3
+#
+#
+# cubes = [cube(i) for i in range(1, 54)]
+# print(cubes)
 
 # print(rotate.is_prime(711))
+# def is_prime(num):
+#     import math
+#     root = math.ceil(math.sqrt(num))
+#     # divisor = (num // 2) + 1
+#     for i in range(2, root):
+#         if num % i == 0:
+#             return False
+#     return True
+
+def prime_num(number):
+    # returns true if a number is prime
+    factors, i = 0, 1
+    while i <= number:
+        if number % i == 0:
+            factors += 1
+        i += 1
+    if factors == 2:
+        return True
+    return False
+
+
+primes = [i for i in range(1, 10) if prime_num(i)]
+print(primes)

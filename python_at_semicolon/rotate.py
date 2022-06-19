@@ -30,27 +30,6 @@ def fibonacci(num):
         c = nth
 
 
-def is_prime(num):
-    root = math.ceil(math.sqrt(num))+1
-    # divisor = (num // 2) + 1
-    for i in range(2, root):
-        if num % i == 0:
-            return False
-    return True
-
-
-def prime_num(number):
-    # returns true if a number is prime
-    factors, i = 0, 1
-    while i <= number:
-        if number % i == 0:
-            factors += 1
-        i += 1
-    if factors == 2:
-        return True
-    return False
-
-
 def product_of_list(lst):
     total = 1
     for a in lst:
@@ -62,8 +41,8 @@ def get_longest_string(lst):
     lst.sort(key=len, reverse=True)
     return lst[0]
 
-
-my_list = [1, 4, 5, 6, 67, 6]
+#
+# my_list = [1, 4, 5, 6, 67, 6]
 # print("question 1: rotate a list => ", rotate_list(my_list, 19))
 # print("question 2: prime numbers from 0 to 100 => ", prime(100))
 # print("question 3: product of items in a list => ", product_of_list(my_list))
