@@ -9,3 +9,7 @@ set_b &= set_a  # intersection_update
 set_b -= set_a  # difference_update
 set_b ^= set_a  # symmetric_difference_update
 print(set_b)
+
+var = set_b < set_a  # subset
+var2 = set_b > set_a  # superset
+
