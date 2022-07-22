@@ -2,9 +2,22 @@ import sys
 
 
 class Person:
+    number_of_instances = 0
+
     def __init__(self, name: str, age=17) -> None:
         self._name = name
         self._age = age
+        Person.number_of_instances += 1
+
+    @classmethod
+    def get_number_of_instances(cls):
+        return cls.number_of_instances
+
+    @staticmethod
+    def determine_class(age: int) -> str:
+        if age >= 18:
+            return 'Major'
+        return 'Minor'
 
     @property
     def name(self):
@@ -37,8 +50,9 @@ person = Person("obi")
 person.name = "chukwudi"
 # del person.name
 
-try:
+print(person.determine_class(person.age))
 
+try:
     print(person.age)
 except:
     print("Oops!", sys.exc_info()[0], "occurred.")
