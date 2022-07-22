@@ -1,7 +1,10 @@
-class Person:
+import sys
 
-    def __init__(self, name: str) -> None:
+
+class Person:
+    def __init__(self, name: str, age=17) -> None:
         self._name = name
+        self._age = age
 
     @property
     def name(self):
@@ -15,11 +18,27 @@ class Person:
 
     @name.deleter
     def name(self):
-        self._name = ''
+        print('name will be deleted')
+        del self._name
+
+    @property
+    def age(self):
+        return self._age
+
+    @age.setter
+    def age(self, new_age):
+        if new_age < 0:
+            raise ValueError("age can't be negative")
+        self._age = new_age
 
 
-person1 = Person("obi")
+person = Person("obi")
 
-person1.name = "chukwudi"
-del person1.name
-print(person1.name)
+person.name = "chukwudi"
+# del person.name
+
+try:
+
+    print(person.age)
+except:
+    print("Oops!", sys.exc_info()[0], "occurred.")
